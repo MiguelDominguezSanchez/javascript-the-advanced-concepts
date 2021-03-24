@@ -21,6 +21,7 @@ window.sayMyName()
 ///////////////////////
 // 3.4 Hoisting
 
+/*
 console.log('1--------')
 console.log(teddy)
 console.log(sing2)
@@ -35,3 +36,31 @@ var sing2 = function () {
 function sing() {
 	console.log('ohhh la la la')
 }
+*/
+
+///////////////////////
+// 4.5 Exercise Hoisting
+
+/*
+one = undefined
+var one = 1
+var one = 2
+
+console.log(one)
+*/
+
+/*
+// a()
+
+function a() {
+	console.log('hi')
+}
+
+function a() {
+	console.log('bye')
+}
+a()
+*/
+
+///////////////////////
+// 4.5 Exercise Hoisting
