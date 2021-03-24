@@ -157,6 +157,7 @@ india()
 ///////////////////////
 // 4.10 Variable Environment
 
+/*
 function two() {
 	var isValid //undefined
 }
@@ -173,3 +174,42 @@ one()
 // two() -- undefined
 // one() -- true
 //global() --false
+*/
+
+///////////////////////
+// 4.11 Scope Chain
+
+/*
+var x = 'x'
+function findName() {
+	console.log(x)
+	var b = 'b'
+	return printName()
+}
+
+function printName() {
+	var c = 'c'
+	return 'Andrei Neagoie'
+}
+
+function sayMyName() {
+	var a = 'a'
+	return findName()
+}
+*/
+
+function sayMyName() {
+	var a = 'a'
+	return function findName() {
+		var b = 'b'
+		return function printName() {
+			var c = 'c'
+			console.log(a)
+			return 'Andrei Neagoie'
+		}
+	}
+}
+
+// console.log(sayMyName())
+// console.log(sayMyName()())
+console.log(sayMyName()()())
