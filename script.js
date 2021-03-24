@@ -138,7 +138,7 @@ function marry2(...args) {
 
 console.log(marry2('Tim', 'Tina'))
 */
-
+/*
 var canada = () => {
 	console.log('cold')
 }
@@ -152,3 +152,24 @@ function india() {
 // Function Invocation/Call/Execution
 // canada()
 india()
+*/
+
+///////////////////////
+// 4.10 Variable Environment
+
+function two() {
+	var isValid //undefined
+}
+
+function one() {
+	var isValid = true // local/variable environment
+	two() // new EC
+}
+
+var isValid = false
+one()
+
+// we also have 'one' and 'two' functions in the global variable environment.
+// two() -- undefined
+// one() -- true
+//global() --false
