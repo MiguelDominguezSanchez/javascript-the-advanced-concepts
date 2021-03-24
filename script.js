@@ -63,4 +63,16 @@ a()
 */
 
 ///////////////////////
-// 4.5 Exercise Hoisting
+// 4.6 Exercise Hoisting 2
+
+const favouriteFood = 'grapes'
+
+const foodThoughts = function () {
+	console.log('Original favourite food: ' + favouriteFood)
+
+	const favouriteFood = 'sushi'
+
+	console.log('New favourite food: ' + favouriteFood)
+}
+
+foodThoughts()
