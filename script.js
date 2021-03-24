@@ -198,6 +198,7 @@ function sayMyName() {
 }
 */
 
+/*
 function sayMyName() {
 	var a = 'a'
 	return function findName() {
@@ -213,3 +214,7 @@ function sayMyName() {
 // console.log(sayMyName())
 // console.log(sayMyName()())
 console.log(sayMyName()()())
+*/
+
+///////////////////////
+// 4.12 [[scope]]
