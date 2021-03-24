@@ -65,6 +65,7 @@ a()
 ///////////////////////
 // 4.6 Exercise Hoisting 2
 
+/*
 const favouriteFood = 'grapes'
 
 const foodThoughts = function () {
@@ -76,3 +77,52 @@ const foodThoughts = function () {
 }
 
 foodThoughts()
+*/
+
+///////////////////////
+// 4.7 Exercise Hoisting 3
+
+/*
+function bigBrother() {
+	function littleBrother() {
+		return 'it is me!'
+	}
+	return littleBrother()
+	function littleBrother() {
+		return 'no me!'
+	}
+}
+
+// Before running this code, what do you think the output is?
+console.log(bigBrother())
+*/
+
+///////////////////////
+// 4.8 Function Invocation
+
+// Function Expression
+/*
+var canada = function () {
+	console.log('cold')
+}
+*/
+
+var canada = () => {
+	console.log('cold')
+}
+
+// Function Declaration
+function india() {
+	console.log('warm')
+}
+
+// Function Invocation/Call/Execution
+canada()
+india()
+
+function marry(person1, person2) {
+	console.log('arguments', arguments)
+	return `${person1} is now married to ${person2}`
+}
+
+console.log(marry('Tim', 'Tina'))
