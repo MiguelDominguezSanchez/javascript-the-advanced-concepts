@@ -389,7 +389,7 @@ const obj = {
 
 console.log(obj.singAgain())
 */
-
+/*
 function importantPerson() {
 	console.log(this.name + '!')
 }
@@ -407,3 +407,81 @@ const obj2 = {
 importantPerson()
 obj1.importantPerson()
 obj2.importantPerson()
+*/
+
+///////////////////////
+// 3.19 Exercise Dynamic Scope vvs Lexical Scope
+/*
+const a = function () {
+	console.log('a', this)
+	const b = function () {
+		console.log('b', this)
+		const c = {
+			hi: function () {
+				console.log('c', this)
+			},
+		}
+		c.hi()
+	}
+	b()
+}
+
+a()
+*/
+/*
+const obj = {
+	name: 'Billy',
+	sing() {
+		console.log('a', this)
+		var anotherFunc = function () {
+			console.log('b', this)
+		}
+		anotherFunc()
+	},
+}
+
+obj.sing()
+*/
+/*
+const obj = {
+	name: 'Billy',
+	sing() {
+		console.log('a', this)
+		var anotherFunc = () => {
+			console.log('b', this)
+		}
+		anotherFunc()
+	},
+}
+
+obj.sing()
+*/
+
+/*
+const obj = {
+	name: 'Billy',
+	sing() {
+		console.log('a', this)
+		var anotherFunc = () => {
+			console.log('b', this)
+		}
+		return anotherFunc.bind(this)
+	},
+}
+
+obj.sing()()
+*/
+
+const obj = {
+	name: 'Billy',
+	sing: function () {
+		console.log(this)
+		var self = this
+		var anotherFunc = function () {
+			console.log(self)
+		}
+		return anotherFunc
+	},
+}
+
+obj.sing()()
