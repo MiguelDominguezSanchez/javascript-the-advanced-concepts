@@ -472,6 +472,7 @@ const obj = {
 obj.sing()()
 */
 
+/*
 const obj = {
 	name: 'Billy',
 	sing: function () {
@@ -485,3 +486,98 @@ const obj = {
 }
 
 obj.sing()()
+*/
+
+///////////////////////
+// 3.20 call(), apply(), bind()
+
+/*
+call()
+apply()
+bind()
+*/
+
+/*
+function a() {
+	console.log('hi')
+}
+
+// a.call()
+// a()
+a.apply()
+*/
+
+/*
+const wizard = {
+	name: 'Merlin',
+	health: 50,
+	heal() {
+		return (this.health = 100)
+	},
+}
+
+const archer = {
+	name: 'Robin Hood',
+	health: 30,
+}
+
+console.log('1', archer)
+console.log(wizard.heal.call(archer))
+console.log('2', archer)
+*/
+
+/*
+const wizard = {
+	name: 'Merlin',
+	health: 50,
+	heal(num1, num2) {
+		return (this.health += num1 + num2)
+	},
+}
+
+const archer = {
+	name: 'Robin Hood',
+	health: 30,
+}
+
+console.log('1', archer)
+console.log(wizard.heal.call(archer, 50, 30))
+console.log('2', archer)
+*/
+
+/*
+const wizard = {
+	name: 'Merlin',
+	health: 50,
+	heal(num1, num2) {
+		return (this.health += num1 + num2)
+	},
+}
+
+const archer = {
+	name: 'Robin Hood',
+	health: 30,
+}
+
+console.log('1', archer)
+console.log(wizard.heal.apply(archer, [100, 30]))
+console.log('2', archer)
+*/
+
+const wizard = {
+	name: 'Merlin',
+	health: 50,
+	heal(num1, num2) {
+		return (this.health += num1 + num2)
+	},
+}
+
+const archer = {
+	name: 'Robin Hood',
+	health: 30,
+}
+
+console.log('1', archer)
+const healArcher = wizard.heal.bind(archer, 100, 30)
+healArcher()
+console.log('2', archer)
