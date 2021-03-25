@@ -564,6 +564,7 @@ console.log(wizard.heal.apply(archer, [100, 30]))
 console.log('2', archer)
 */
 
+/*
 const wizard = {
 	name: 'Merlin',
 	health: 50,
@@ -581,3 +582,15 @@ console.log('1', archer)
 const healArcher = wizard.heal.bind(archer, 100, 30)
 healArcher()
 console.log('2', archer)
+*/
+
+///////////////////////
+// 3.22 bind() and currying
+
+//function currying
+function multiply(a, b) {
+	return a * b
+}
+
+let multiplyByTwo = multiply.bind(this, 2)
+console.log(multiplyByTwo(4))
