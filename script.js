@@ -217,7 +217,7 @@ console.log(sayMyName()()())
 */
 
 ///////////////////////
-// 4.12 [[scope]]
+// 3.12 [[scope]]
 
 ///////////////////////
 // 4.13 Exercise JS is Weird
@@ -232,6 +232,7 @@ function weird() {
 console.log(weird())
 */
 
+/*
 var heyhey = function doodle() {
 	// do something
 	return 'heyhey'
@@ -239,3 +240,33 @@ var heyhey = function doodle() {
 
 console.log(heyhey())
 console.log(doodle())
+*/
+
+///////////////////////
+// 3.13 Foundation Scope vs Block Scope
+
+// function scope
+// vs
+// block scope
+/*
+if (5 > 4) {
+	var secret = '12345'
+}
+
+console.log(secret)
+*/
+
+// Block Scope
+/*
+if (5 > 4) {
+	const secret = '12345'
+}
+
+console.log(secret)
+*/
+
+if (5 > 4) {
+	let secret = '12345'
+}
+
+console.log(secret)
