@@ -10,11 +10,30 @@
 </head>
 <body>
     <h1>Hello World</h1>
-    <script>var z = 1</script>
+    <script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous"></script>
+    <script>
+    var z = 1
+    var script1 = (function ($) {
+        $('h1').click(function() {
+            $('h1').hide();
+        })
+        return {
+            $: 'hi'
+        }
+    })(jQuery)
+    </script>
     <script>var zz = 2</script>
     <script>var zzz = 3</script>
-    <script>var z = 10000</script>
+    <script>
+        var z = 10000
+        function a() {
+            return 'hahhaha'
+        }
+        </script>
 
-    <script src="script.js"></script>
+    // <script src="script.js"></script>
 </body>
 </html>
