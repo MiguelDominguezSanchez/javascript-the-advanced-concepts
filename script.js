@@ -264,9 +264,33 @@ if (5 > 4) {
 
 console.log(secret)
 */
-
+/*
 if (5 > 4) {
 	let secret = '12345'
 }
 
 console.log(secret)
+*/
+
+///////////////////////
+// 3.15 Exercise Block Scope
+
+/*
+function loop() {
+	for (var i = 0; i < 5; i++) {
+		console.log(i)
+	}
+	console.log('final', i)
+}
+
+loop()
+*/
+
+function loop() {
+	for (let i = 0; i < 5; i++) {
+		console.log(i)
+	}
+	console.log('final', i)
+}
+
+loop()
