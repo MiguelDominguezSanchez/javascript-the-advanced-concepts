@@ -302,8 +302,108 @@ loop()
 ///////////////////////
 // 3.17 IIFE
 
+/*
 ;(function () {
 	var a = 1
 })()
 
 a
+*/
+
+///////////////////////
+// 3.18 This Keyword
+
+// obj.someFunc(this)
+
+/*
+const obj = {
+	name: 'Billy',
+	sing: function () {
+		return 'lalala Billy'
+	},
+}
+
+const obj = {
+	name: 'Veronica',
+	sing: function () {
+		return 'lalala Veronica'
+	},
+}
+*/
+
+/*
+const obj = {
+	name: 'Veronica',
+	sing: function () {
+		return 'lalala ' + this.name
+	},
+}
+*/
+/*
+const obj = {
+	name: 'Veronica',
+	sing: function () {
+		return 'lalala' + obj.name
+	},
+}
+*/
+/*
+console.log(obj.sing())
+*/
+/*
+const obj = {
+	name: 'Billy',
+	sing: function () {
+		return 'lalala ' + this.name
+	},
+}
+
+console.log(obj.sing())
+*/
+/*
+const obj = {
+	name: 'Billy',
+	sing() {
+		return 'lalala ' + this.name
+	},
+	singAgain() {
+		return 'lalala ' + this.name + '!'
+	},
+}
+
+console.log(obj.singAgain())
+*/
+
+//1: gives methods access to their object
+//2: execute the same code for multiple objects
+/*
+const obj = {
+	name: 'Billy',
+	sing() {
+		return 'lalala ' + this.name
+	},
+	singAgain() {
+		return this.sing() + '!'
+	},
+}
+
+console.log(obj.singAgain())
+*/
+
+function importantPerson() {
+	console.log(this.name + '!')
+}
+
+// window.importantPerson()
+const name = 'Sunny'
+const obj1 = {
+	name: 'Cassy',
+	importantPerson: importantPerson,
+}
+const obj2 = {
+	name: 'Jacob',
+	importantPerson: importantPerson,
+}
+importantPerson()
+obj1.importantPerson()
+obj2.importantPerson()
