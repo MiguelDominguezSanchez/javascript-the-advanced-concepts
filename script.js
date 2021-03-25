@@ -588,9 +588,43 @@ console.log('2', archer)
 // 3.22 bind() and currying
 
 //function currying
+/*
 function multiply(a, b) {
 	return a * b
 }
 
 let multiplyByTwo = multiply.bind(this, 2)
 console.log(multiplyByTwo(4))
+*/
+
+///////////////////////
+// 3.23 Exercise This Keyword
+
+var b = {
+	name: 'jay',
+	say() {
+		console.log(this)
+	},
+}
+
+var c = {
+	name: 'jay',
+	say() {
+		return function () {
+			console.log(this)
+		}
+	},
+}
+
+var d = {
+	name: 'jay',
+	say() {
+		return () => console.log(this)
+	},
+}
+
+// b.say()
+// console.log(c.say()())
+// c.say()()
+// console.log(d.say())
+console.log(d.say()())
