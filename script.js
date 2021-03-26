@@ -600,6 +600,7 @@ console.log(multiplyByTwo(4))
 ///////////////////////
 // 3.23 Exercise This Keyword
 
+/*
 var b = {
 	name: 'jay',
 	say() {
@@ -628,3 +629,39 @@ var d = {
 // c.say()()
 // console.log(d.say())
 console.log(d.say()())
+*/
+
+///////////////////////
+// 4.2 Javascript Types
+
+/*
+// Primitive
+console.log(typeof 5)
+console.log(typeof true)
+console.log(typeof 'To be or not to be')
+console.log(typeof undefined)
+console.log(typeof null)
+console.log(typeof Symbol('just me'))
+
+// Non-Primitive
+const obj1 = {
+	a: 'Tom',
+}
+console.log(typeof {})
+console.log(typeof [])
+console.log(typeof function () {})
+
+function a() {
+	return 5
+}
+
+console.log((a.hi = 'hihihihihi'))
+*/
+
+/*
+console.log(true.toString())
+console.log(Boolean(true).toString())
+*/
+
+console.log(typeof Math)
+console.log(typeof Infinity)
