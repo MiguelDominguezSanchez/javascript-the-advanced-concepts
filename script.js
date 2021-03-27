@@ -1091,6 +1091,7 @@ function callMeMaybe() {
 console.log(callMeMaybe())
 */
 
+/*
 function callMeMaybe() {
 	setTimeout(function () {
 		console.log(callMe)
@@ -1099,3 +1100,80 @@ function callMeMaybe() {
 }
 
 console.log(callMeMaybe())
+*/
+
+///////////////////////
+// 5.9 Closures and Memory
+
+// Memory efficient
+/*
+function heavyDuty() {
+	const bigArray = new Array(7000).fill('hi')
+	return bigArray
+}
+
+console.log(heavyDuty())
+*/
+
+/*
+function heavyDuty(index) {
+	const bigArray = new Array(7000).fill('hi')
+	console.log('created!')
+	return bigArray[index]
+}
+
+console.log(heavyDuty(688))
+console.log(heavyDuty(688))
+console.log(heavyDuty(688))
+// console.log(heavyDuty(688))
+const getHeavyDuty = heavyDuty2()
+getHeavyDuty(688)
+getHeavyDuty(700)
+getHeavyDuty(800)
+
+function heavyDuty2(index) {
+	const bigArray = new Array(7000).fill('hi')
+	console.log('created! Again!')
+	return function (index) {
+		return bigArray[index]
+	}
+}
+*/
+
+// Encapsulation
+/*
+const makeNuclearButton = () => {
+	let timeWithoutDestruction = 0
+	const passTime = () => timeWithoutDestruction++
+	const totalPeaceTime = () => timeWithoutDestruction
+	const launch = () => {
+		timeWithoutDestruction = -1
+		;('boom')
+	}
+	setInterval(passTime, 1000)
+	return {
+		launch: launch,
+		totalPeaceTime: totalPeaceTime,
+	}
+}
+
+const ohno = makeNuclearButton()
+ohno.totalPeaceTime()
+*/
+
+const makeNuclearButton = () => {
+	let timeWithoutDestruction = 0
+	const passTime = () => timeWithoutDestruction++
+	const totalPeaceTime = () => timeWithoutDestruction
+	const launch = () => {
+		timeWithoutDestruction = -1
+		;('boom')
+	}
+	setInterval(passTime, 1000)
+	return {
+		totalPeaceTime: totalPeaceTime,
+	}
+}
+
+const ohno = makeNuclearButton()
+ohno.passTime()
