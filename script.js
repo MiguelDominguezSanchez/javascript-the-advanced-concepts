@@ -1011,7 +1011,24 @@ console.log(letPerson({ level: 'admin', name: 'Sally' }, authenticate))
 console.log(letPerson({ level: 'admin', name: 'Sally' }, sing))
 */
 
-const multiply
+///////////////////////
+// 5.6 Exercise Higher Order Functions
 
-multiplyByTwo
-multiplyByTen
+/*
+const multiply = function (num1) {
+	return function (num2) {
+		return num1 * num2
+	}
+}
+*/
+
+/*
+const multiply = num1 => num2 => num1 * num2
+
+multiplyBy(4)(6)
+*/
+// const multiplyByTwo = multiplyBy(2)
+// const multiplyByFive = multiplyBy(5)
+// console.log(multiplyByTwo(4))
+// console.log(multiplyByTwo(10))
+// console.log(multiplyByFive(6))
