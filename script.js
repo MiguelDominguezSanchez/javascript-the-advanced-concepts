@@ -916,3 +916,102 @@ function a(param = 6) {
 
 console.log(a())
 */
+
+///////////////////////
+// 5.5 Higher Order Functions
+
+/*
+function letAdamLogin() {
+	let array = []
+	for (let i = 0; i < 1000000; i++) {
+		array.push(i)
+	}
+	return 'Access Granted to Adam'
+}
+
+function letEvaLogin() {
+	let array = []
+	for (let i = 0; i < 1000000; i++) {
+		array.push(i)
+	}
+	return 'Access Granted to Eva'
+}
+
+console.log(letAdamLogin())
+console.log(letEvaLogin())
+*/
+
+/*
+const giveAccessTo = name => 'Access Granted to ' + name
+
+function authenticate(verify) {
+	let array = []
+	for (let i = 0; i < verify; i++) {
+		array.push(i)
+	}
+	return true
+}
+function letUserLogin(user) {
+	//++ we now tell //WHAT DATA to use.
+
+	return giveAccessTo(user)
+}
+
+function letAdminLogin(admin) {
+	let array = []
+	for (let i = 0; i < 5000000; i++) {
+		array.push(i)
+	}
+	return giveAccessTo(admin)
+}
+const giveAccessTo = name => 'Access Granted to ' + name
+
+function letUserLogin(user) {
+	//++ we now tell //WHAT DATA to use.
+
+	return giveAccessTo(user)
+}
+
+function letAdminLogin(admin) {
+	let array = []
+	for (let i = 0; i < 5000000; i++) {
+		array.push(i)
+	}
+	return giveAccessTo(admin)
+}
+*/
+
+//
+
+/*
+const giveAccessTo = name => 'Access Granted to ' + name
+
+function authenticate(verify) {
+	let array = []
+	for (let i = 0; i < verify; i++) {
+		array.push(i)
+	}
+	return giveAccessTo(person.name)
+}
+function sing(person) {
+	return 'la la la my name is ' + person.name
+}
+function letPerson(person, fn) {
+	// ++ tell it what data to user + function.
+	if (person.level === 'admin') {
+		return fn(person)
+	} else if (person.level === 'user') {
+		return fn(person)
+	}
+}
+
+console.log(letPerson({ level: 'user', name: 'Tim' }, authenticate))
+console.log(letPerson({ level: 'admin', name: 'Sally' }, authenticate))
+
+console.log(letPerson({ level: 'admin', name: 'Sally' }, sing))
+*/
+
+const multiply
+
+multiplyByTwo
+multiplyByTen
