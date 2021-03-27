@@ -694,10 +694,12 @@ var a = 5
 var b = 10
 */
 
+/*
 var a = 5
 var b = a
 
 b++
+*/
 
 /*
 console.log(a)
@@ -733,6 +735,7 @@ console.log(clone)
 console.log(clone2)
 */
 
+/*
 let obj = {
 	a: 'a',
 	b: 'b',
@@ -749,3 +752,25 @@ console.log(obj)
 console.log(clone)
 console.log(clone2)
 console.log(superClone)
+*/
+
+///////////////////////
+// 4.7 Type Coercion
+/*
+console.log(1 == '1')
+console.log(1 == 1)
+console.log(1 === '1')
+*/
+
+// if (1) {
+// 	console.log(5)
+// }
+
+/*
+if (0) {
+	console.log(5)
+}
+*/
+
+console.log(Object.is(-0, +0))
+console.log(NaN === NaN)
