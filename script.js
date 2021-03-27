@@ -1161,6 +1161,7 @@ const ohno = makeNuclearButton()
 ohno.totalPeaceTime()
 */
 
+/*
 const makeNuclearButton = () => {
 	let timeWithoutDestruction = 0
 	const passTime = () => timeWithoutDestruction++
@@ -1177,3 +1178,18 @@ const makeNuclearButton = () => {
 
 const ohno = makeNuclearButton()
 ohno.passTime()
+*/
+
+///////////////////////
+// 5.11 Exercise Closures 2
+
+let view
+function initialize() {
+	view = 'mountain'
+	console.log('view has been set!')
+}
+
+initialize()
+initialize()
+initialize()
+console.log(view)
