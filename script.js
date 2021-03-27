@@ -756,6 +756,7 @@ console.log(superClone)
 
 ///////////////////////
 // 4.7 Type Coercion
+
 /*
 console.log(1 == '1')
 console.log(1 == 1)
@@ -772,5 +773,107 @@ if (0) {
 }
 */
 
+/*
 console.log(Object.is(-0, +0))
 console.log(NaN === NaN)
+*/
+
+///////////////////////
+// 4.10 JTS Dynamic vs Static Typing
+
+///////////////////////
+// 4.11 JTS Weakly vs Strongly Typed
+
+///////////////////////
+// 4.12 JTS Static Typing in Javascript
+
+///////////////////////
+// 5.2 Functions are objects
+
+/*
+function one() {
+	return 1
+}
+
+console.log(one())
+*/
+
+/*
+const obj = {
+	two: function () {
+		return 2
+	},
+}
+console.log(obj.two())
+*/
+
+/*
+function three() {
+	return 3
+}
+console.log(three.call())
+*/
+
+/*
+const four = new Function('return 4')
+console.log(four())
+*/
+
+/*
+const four = new Function('num', 'return num')
+console.log(four(4))
+*/
+
+/*
+function wooohooo() {
+	console.log('wooohooo')
+}
+*/
+
+// wooohooo.yell = 'ahhhhhhh'
+
+/*
+const specialObj = {
+	yell: 'ahhhhhhh',
+	name: 'wooohooo',
+	(): console.log('wooohooo')
+}
+*/
+
+/*
+console.log(wooohooo.name)
+
+const obj = {
+
+}
+
+obj.argument
+*/
+
+///////////////////////
+// 5.3 First Class Citizens
+
+// Functions are first class citizens in JS
+
+// 1
+var stuff = function () {}
+// 2
+function a(fn) {
+	fn()
+}
+
+a(function () {
+	console.log('hi there')
+})
+// 3
+function b() {
+	return function c() {
+		console.log('bye')
+	}
+}
+
+console.log(b())
+console.log(b()())
+
+var d = b()
+console.log(d())
