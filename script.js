@@ -855,6 +855,7 @@ obj.argument
 
 // Functions are first class citizens in JS
 
+/*
 // 1
 var stuff = function () {}
 // 2
@@ -877,3 +878,41 @@ console.log(b()())
 
 var d = b()
 console.log(d())
+*/
+
+///////////////////////
+// 5.4 Extra Bits Functions
+
+/*
+for (let i = 0; i < 5; i++) {
+	function a() {}
+	a()
+}
+
+//
+
+function a() {}
+for (let i = 0; i < 5; i++) {
+	a()
+}
+*/
+
+/*
+function a() {
+	return param
+}
+
+a()
+
+function a(param) {
+	return param
+}
+
+a()
+
+function a(param = 6) {
+	return param
+}
+
+console.log(a())
+*/
