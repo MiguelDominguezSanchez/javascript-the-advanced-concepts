@@ -1066,6 +1066,7 @@ function boo(string) {
 }
 */
 
+/*
 const boo = string => name => name2 => console.log(`${string} ${name} ${name2}`)
 
 // console.log(boo('hi')('tim')('becca'))
@@ -1073,3 +1074,28 @@ const boo = string => name => name2 => console.log(`${string} ${name} ${name2}`)
 const booString = boo('hi')
 // 5 years
 const booStringName = booString()
+*/
+
+///////////////////////
+// 5.6 Exercise Higher Order Functions
+
+// Exercise
+/*
+function callMeMaybe() {
+	const callMe = 'Hi! I am now here!'
+	setTimeout(function () {
+		console.log(callMe)
+	}, 4000)
+}
+
+console.log(callMeMaybe())
+*/
+
+function callMeMaybe() {
+	setTimeout(function () {
+		console.log(callMe)
+	}, 4000)
+	const callMe = 'Hi! I am now here!'
+}
+
+console.log(callMeMaybe())
