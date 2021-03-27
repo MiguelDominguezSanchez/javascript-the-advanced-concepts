@@ -1032,3 +1032,44 @@ multiplyBy(4)(6)
 // console.log(multiplyByTwo(4))
 // console.log(multiplyByTwo(10))
 // console.log(multiplyByFive(6))
+
+///////////////////////
+// 5.7 Closures
+
+/*
+function a() {
+	let grandpa = 'grandpa'
+	return function b() {
+		let father = 'father'
+		return function c() {
+			let son = 'son'
+			return `${grandpa} > ${father} > ${son}`
+		}
+	}
+}
+
+console.log(a())
+console.log(a()())
+console.log(a()()())
+
+const one = a()
+// b()
+*/
+
+/*
+function boo(string) {
+	return function (name) {
+		return function (name2) {
+			console.log(`${string} ${name} ${name2}`)
+		}
+	}
+}
+*/
+
+const boo = string => name => name2 => console.log(`${string} ${name} ${name2}`)
+
+// console.log(boo('hi')('tim')('becca'))
+
+const booString = boo('hi')
+// 5 years
+const booStringName = booString()
