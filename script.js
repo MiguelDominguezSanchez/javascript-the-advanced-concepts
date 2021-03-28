@@ -1183,6 +1183,7 @@ ohno.passTime()
 ///////////////////////
 // 5.11 Exercise Closures 2
 
+/*
 let view
 function initialize() {
 	view = 'mountain'
@@ -1192,4 +1193,28 @@ function initialize() {
 initialize()
 initialize()
 initialize()
+console.log(view)
+*/
+
+///////////////////////
+// 5.12 Solution Closures 2
+
+let view
+function initialize() {
+	let called = 0
+	return function () {
+		if (called > 0) {
+			return
+		} else {
+			view = 'mountain'
+			called++
+			console.log('view has been set!')
+		}
+	}
+}
+
+const startOnce = initialize()
+startOnce()
+startOnce()
+startOnce()
 console.log(view)
