@@ -1327,3 +1327,15 @@ for (let prop in lizard) {
 
 ///////////////////////
 // 5.19 Prototypal Inheritance 4
+
+///////////////////////
+// 5.20 Prototypal Inheritance 5
+
+let human = {
+	mortal: true,
+}
+
+let socrates = Object.create(human)
+socrates.age = 45
+// console.log(socrates.mortal)
+console.log(human.isPrototypeOf(socrates))
