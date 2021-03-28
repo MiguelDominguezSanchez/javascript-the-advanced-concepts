@@ -1245,6 +1245,7 @@ for (let i = 0; i < array.length; i++) {
 }
 */
 
+/*
 const array = [1, 2, 3, 4]
 for (let i = 0; i < array.length; i++) {
 	;(function (closureI) {
@@ -1253,3 +1254,39 @@ for (let i = 0; i < array.length; i++) {
 		}, 3000)
 	})(i)
 }
+*/
+
+///////////////////////
+// 5.17 Prototypal Inheritance 2
+
+let dragon = {
+	name: 'Tanya',
+	fire: true,
+	fight() {
+		return 5
+	},
+	sing() {
+		if (this.fire) {
+			return `I am ${this.name}, tha breather of fire`
+		}
+	},
+}
+
+// console.log(drsagon.sing())
+
+let lizard = {
+	name: 'Kiki',
+	fight() {
+		return 1
+	},
+}
+
+// const singLizard = dragon.sing.bind(lizard)
+// console.log(singLizard())
+
+lizard.__proto__ = dragon
+// console.log(lizard.sing())
+// console.log(lizard.fight())
+// console.log(lizard.dance())
+// console.log(dragon.__proto__)
+console.log(dragon.isPrototypeOf(lizard))
