@@ -1296,6 +1296,7 @@ console.log(dragon.isPrototypeOf(lizard))
 ///////////////////////
 // 5.17 Prototypal Inheritance 2
 
+/*
 let dragon = {
 	name: 'Tanya',
 	fire: true,
@@ -1322,3 +1323,7 @@ for (let prop in lizard) {
 		console.log(prop)
 	}
 }
+*/
+
+///////////////////////
+// 5.19 Prototypal Inheritance 4
