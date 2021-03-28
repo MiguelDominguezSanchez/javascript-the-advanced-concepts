@@ -1259,6 +1259,7 @@ for (let i = 0; i < array.length; i++) {
 ///////////////////////
 // 5.17 Prototypal Inheritance 2
 
+/*
 let dragon = {
 	name: 'Tanya',
 	fire: true,
@@ -1290,3 +1291,34 @@ lizard.__proto__ = dragon
 // console.log(lizard.dance())
 // console.log(dragon.__proto__)
 console.log(dragon.isPrototypeOf(lizard))
+*/
+
+///////////////////////
+// 5.17 Prototypal Inheritance 2
+
+let dragon = {
+	name: 'Tanya',
+	fire: true,
+	fight() {
+		return 5
+	},
+	sing() {
+		if (this.fire) {
+			return `I am ${this.name}, tha breather of fire`
+		}
+	},
+}
+
+let lizard = {
+	name: 'Kiki',
+	fight() {
+		return 1
+	},
+}
+
+lizard.__proto__ = dragon
+for (let prop in lizard) {
+	if (lizard.hasOwnProperty(prop)) {
+		console.log(prop)
+	}
+}
