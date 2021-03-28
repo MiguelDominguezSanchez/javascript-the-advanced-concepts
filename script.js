@@ -1199,6 +1199,7 @@ console.log(view)
 ///////////////////////
 // 5.12 Solution Closures 2
 
+/*
 let view
 function initialize() {
 	let called = 0
@@ -1218,3 +1219,14 @@ startOnce()
 startOnce()
 startOnce()
 console.log(view)
+*/
+
+///////////////////////
+// 5.13 Exercise Closures 3
+
+const array = [1, 2, 3, 4]
+for (var i = 0; i < array.length; i++) {
+	setTimeout(function () {
+		console.log('I am at index ' + i)
+	}, 3000)
+}
