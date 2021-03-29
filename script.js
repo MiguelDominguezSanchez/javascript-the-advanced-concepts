@@ -1444,6 +1444,7 @@ const peter = createElf('Peter', 'stones')
 console.log(peter.attack())
 */
 
+/*
 function createElf(name, weapon) {
 	return {
 		name,
@@ -1452,6 +1453,49 @@ function createElf(name, weapon) {
 			return 'attack with ' + weapon
 		},
 	}
+}
+
+const peter = createElf('Peter', 'stones')
+console.log(peter.attack())
+const sam = createElf('Sam', 'fire')
+console.log(sam.attack())
+*/
+
+///////////////////////
+// 6.5 OOP2 Object.create()
+
+/*
+const elfFunctions = {
+	attack() {
+		return 'attack with ' + this.weapon
+	},
+}
+function createElf(name, weapon) {
+	return {
+		name,
+		weapon,
+	}
+}
+
+const peter = createElf('Peter', 'stones')
+peter.attack = elfFunctions.attack
+console.log(peter.attack())
+const sam = createElf('Sam', 'fire')
+sam.attack = elfFunctions.attack
+console.log(sam.attack())
+*/
+
+// Object.create()
+const elfFunctions = {
+	attack() {
+		return 'attack with ' + this.weapon
+	},
+}
+function createElf(name, weapon) {
+	let newElf = Object.create(elfFunctions)
+	console.log(newElf.__proto__)
+	;(newElf.nme = name), (newElf.weapon = weapon)
+	return newElf
 }
 
 const peter = createElf('Peter', 'stones')
