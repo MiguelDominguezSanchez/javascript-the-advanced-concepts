@@ -1366,6 +1366,7 @@ console.log([1, 2, 3].map())
 ///////////////////////
 // 5.23 Solution Prototypal Inheritance"
 
+/*
 // Exercise - extend the functionality of a builtin object
 
 // #1
@@ -1399,3 +1400,61 @@ Array.prototype.map = function () {
 }
 console.log([1, 2, 3].map())
 // 1map, 2map, 3map
+*/
+
+///////////////////////
+// 6.4 OOP1 Factory Functions
+
+/*
+const elf = {
+	name: 'Orwell',
+	weapon: 'bow',
+	attack() {
+		return 'attack with ' + elf.weapon
+	},
+}
+
+console.log(elf.name)
+console.log(elf.attack())
+
+const elf2 = {
+	name: 'Sally',
+	weapon: 'bow',
+	attack() {
+		return 'attack with ' + elf.weapon
+	},
+}
+
+console.log(elf2.attack())
+*/
+
+// Factory Functions
+/*
+function createElf(name, weapon) {
+	return {
+		name: name,
+		weapon: weapon,
+		attack() {
+			return 'attack with ' + weapon
+		},
+	}
+}
+
+const peter = createElf('Peter', 'stones')
+console.log(peter.attack())
+*/
+
+function createElf(name, weapon) {
+	return {
+		name,
+		weapon,
+		attack() {
+			return 'attack with ' + weapon
+		},
+	}
+}
+
+const peter = createElf('Peter', 'stones')
+console.log(peter.attack())
+const sam = createElf('Sam', 'fire')
+console.log(sam.attack())
