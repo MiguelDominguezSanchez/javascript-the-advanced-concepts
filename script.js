@@ -1348,6 +1348,7 @@ console.log(human.isPrototypeOf(socrates))
 ///////////////////////
 // 5.22 Exercise Prototypal Inheritance"
 
+/*
 // Exercise - extend the functionality of a builtin object
 
 // #1
@@ -1358,5 +1359,43 @@ new Date('1900-10-10').lastYear()
 
 // #Bonus
 // Modify .map() to print 'map' at the end of each item.
+console.log([1, 2, 3].map())
+// 1map, 2map, 3map
+*/
+
+///////////////////////
+// 5.23 Solution Prototypal Inheritance"
+
+// Exercise - extend the functionality of a builtin object
+
+// #1
+// Date object => to have new method .lastYear() which shows you last year 'YYYY' format.
+
+// Date.prototype.lastYear = function () {
+// 	return this.getFullYear() - 1
+// }
+
+// Date.prototype.lastYear = () => {
+// 	console.log(this)
+// 	return this.getFullYear() - 1
+// }
+
+Date.prototype.lastYear = function () {
+	return this.getFullYear() - 1
+}
+// console.log(new Date('1900-10-10').lastYear())
+// console.log(new Date().lastYear())
+console.log(new Date('1988-10-10').lastYear())
+// '1899'
+
+// #Bonus
+// Modify .map() to print 'map' at the end of each item.
+Array.prototype.map = function () {
+	let arr = []
+	for (let i = 0; i < this.length; i++) {
+		arr.push(this[i] + 'map')
+	}
+	return arr
+}
 console.log([1, 2, 3].map())
 // 1map, 2map, 3map
