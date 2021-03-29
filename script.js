@@ -1547,7 +1547,7 @@ console.log(sam.attack())
 
 ///////////////////////
 // 6.7 More Constructor Functions
-
+/*
 // Constructor Functions
 function Elf(name, weapon) {
 	this.name = name
@@ -1573,3 +1573,18 @@ console.log(peter.attack())
 // console.log(peter.build()())
 const sam = new Elf('Sam', 'fire')
 console.log(sam.attack())
+*/
+
+///////////////////////
+// 6.8 Funny Thing About JS
+
+var a = new Number(5)
+
+console.log(a)
+console.log(typeof a)
+var b = 5
+console.log(typeof b)
+console.log(a === b)
+console.log(a == b)
+
+// null and undefined
