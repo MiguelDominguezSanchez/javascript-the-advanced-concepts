@@ -1508,6 +1508,7 @@ console.log(sam.attack())
 ///////////////////////
 // 6.6 OOP3 Constructor functions
 
+/*
 // Constructor Functions
 function Elf(name, weapon) {
 	this.name = name
@@ -1542,3 +1543,33 @@ console.log(sam.attack())
 
 // const sarah = new Elf1('Sarah', 'fireworks')
 // console.log(sarah)
+*/
+
+///////////////////////
+// 6.7 More Constructor Functions
+
+// Constructor Functions
+function Elf(name, weapon) {
+	this.name = name
+	this.weapon = weapon
+	var a = 5
+	console.log('this', this)
+}
+
+Elf.prototype.attack = function () {
+	return 'attack with ' + this.weapon
+}
+
+// Elf.prototype.build = function () {
+// 	const self = this
+// 	function building() {
+// 		return self.name + ' builds a house'
+// 	}
+// 	return building
+// }
+
+const peter = new Elf('Peter', 'stones')
+console.log(peter.attack())
+// console.log(peter.build()())
+const sam = new Elf('Sam', 'fire')
+console.log(sam.attack())
