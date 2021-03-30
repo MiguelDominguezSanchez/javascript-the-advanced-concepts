@@ -1849,9 +1849,29 @@ console.log(Math.abs(Math.abs(-50)))
 ///////////////////////
 // 7.8 Imperative vs Declarative
 
+/*
 // Imperative vs Declarative
 for (let i = 0; i < 1000; i++) {
 	console.log(i)
 }
 
 ;[1, 2, 3].forEach(item => console.log(item))
+*/
+
+///////////////////////
+// 7.9 Immutability
+
+// Immutability
+const obj = { name: 'Andrei' }
+function clone(obj) {
+	return { ...obj }
+}
+
+function updateName(obj) {
+	const obj2 = clone(obj)
+	obj2.name = 'Nana'
+	return obj2
+}
+const updatedObj = updateName(obj)
+// obj.name = 'Nana'
+console.log(obj, updatedObj)
