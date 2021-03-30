@@ -1861,6 +1861,7 @@ for (let i = 0; i < 1000; i++) {
 ///////////////////////
 // 7.9 Immutability
 
+/*
 // Immutability
 const obj = { name: 'Andrei' }
 function clone(obj) {
@@ -1875,3 +1876,28 @@ function updateName(obj) {
 const updatedObj = updateName(obj)
 // obj.name = 'Nana'
 console.log(obj, updatedObj)
+*/
+
+///////////////////////
+// 7.10 Higher Order Function and Closures
+
+// HOF
+const hof = fn => fn(5)
+console.log(
+	hof(function a(x) {
+		return x
+	})
+)
+// Closures
+const closure = function () {
+	let count = 55
+	return function getCounter() {
+		count++
+		return count
+	}
+}
+
+const getCounter = closure()
+console.log(getCounter())
+console.log(getCounter())
+console.log(getCounter())
