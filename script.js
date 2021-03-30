@@ -1615,6 +1615,7 @@ console.log(sam.attack())
 ///////////////////////
 // 6.10 Object.create vs Class
 
+/*
 Object.create()
 // ES6 Classes
 Class Elf {
@@ -1632,3 +1633,50 @@ console.log(peter instanceof Elf);
 console.log(peter.attack())
 const sam = new Elf('Sam', 'fire')
 console.log(sam.attack())
+*/
+
+///////////////////////
+// 6.10 Object.create vs Class
+
+// new binding this
+function Person(name, age) {
+	this.name = name
+	this.age = age
+}
+
+const person1 = new Person('Xavier', 55)
+person1
+
+// implicit binding
+const person = {
+	name: 'Karen',
+	age: 40,
+	hi() {
+		console.log('hi' + this.name)
+	},
+}
+
+// explicit binding
+const person3 = {
+	name: 'Karen',
+	age: 40,
+	hi: function () {
+		console.log('hi' + this.setTimeout)
+	}.bind(window),
+}
+
+console.log(person3.hi())
+
+// arrow function
+const person4 = {
+	name: 'karen',
+	age: 40,
+	hi: function () {
+		var inner = () => {
+			console.log('hi ' + this.name)
+		}
+		return inner()
+	},
+}
+
+console.log(person4.hi())
