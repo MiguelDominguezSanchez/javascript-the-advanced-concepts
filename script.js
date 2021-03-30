@@ -1730,3 +1730,10 @@ console.log(dolby.attack)
 const shrek = new Ogre('Shrek', 'club', 'green')
 // console.log(shrek)
 console.log(shrek.makeFort())
+
+// console.log(Ogre.prototype.isPrototypeOf(shrek))
+// console.log(Character.prototype.isPrototypeOf(Ogre.prototype))
+
+console.log(dolby instanceof Elf)
+console.log(dolby instanceof Ogre)
+console.log(dolby instanceof Character)
