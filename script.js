@@ -1807,6 +1807,7 @@ const array3 = multiplyBy2(array)
 console.log(array, array2, array3)
 */
 
+/*
 function a(num1, num2) {
 	return num1 + num2
 }
@@ -1819,3 +1820,27 @@ function b(num) {
 
 console.log(b(a(3, 4)))
 console.log(b(7))
+*/
+
+///////////////////////
+// 7.4 Idempotence
+
+// indempotence
+/*
+function notGood(num) {
+	return Math.random(num)
+}
+
+console.log(notGood(5))
+*/
+
+/*
+function notGood(num) {
+	console.log(num)
+}
+
+console.log(notGood(5))
+*/
+
+console.log(Math.abs(-50))
+console.log(Math.abs(Math.abs(-50)))
