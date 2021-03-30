@@ -1745,7 +1745,7 @@ console.log(dolby instanceof Character)
 
 ///////////////////////
 // 7.3 Exercise Amazon
-
+/*
 // Amazon shopping
 const user = {
 	name: 'Kim',
@@ -1763,3 +1763,23 @@ const user = {
 // Bonus:
 // accept refunds.
 // Track user history
+*/
+
+///////////////////////
+// 7.4 Pure Functions
+
+// no side effects
+// input --> output
+
+const array = [1, 2, 3]
+function mutateArray(arr) {
+	arr.pop()
+}
+function mutateArray2(arr) {
+	arr.forEach(item => {
+		arr.push(1)
+	})
+}
+mutateArray(array)
+mutateArray2(array)
+console.log(array)
