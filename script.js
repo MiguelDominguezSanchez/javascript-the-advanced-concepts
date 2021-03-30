@@ -1578,6 +1578,7 @@ console.log(sam.attack())
 ///////////////////////
 // 6.8 Funny Thing About JS
 
+/*
 var a = new Number(5)
 
 console.log(a)
@@ -1588,3 +1589,26 @@ console.log(a === b)
 console.log(a == b)
 
 // null and undefined
+*/
+
+///////////////////////
+// 6.9 OOP4 ES6 Classes
+
+// ES6 Classes
+Class Elf {
+	constructor(name, weapon) {
+		this.name = name;
+		this.weapon = weapon;
+	}
+	attack() {
+		return 'attack with ' + this.weapon
+	}
+}
+
+const peter = new Elf('Peter', 'stones')
+console.log(peter instanceof Elf);
+console.log(peter.attack())
+const sam = new Elf('Sam', 'fire')
+console.log(sam.attack())
+
+
