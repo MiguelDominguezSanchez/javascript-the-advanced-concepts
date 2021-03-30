@@ -1767,7 +1767,7 @@ const user = {
 
 ///////////////////////
 // 7.4 Pure Functions
-
+/*
 // no side effects
 // input --> output
 
@@ -1783,3 +1783,39 @@ function mutateArray2(arr) {
 mutateArray(array)
 mutateArray2(array)
 console.log(array)
+*/
+
+///////////////////////
+// 7.4 Pure Functions
+
+// no side effects
+// input --> output
+
+/*
+const array = [1, 2, 3]
+function removeLastItem(arr) {
+	const newArray = [].concat(arr)
+	newArray.pop()
+	return newArray
+}
+function multiplyBy2(arr) {
+	return arr.map(item => item * 2)
+}
+const array2 = removeLastItem(array)
+// mutateArray2(array)
+const array3 = multiplyBy2(array)
+console.log(array, array2, array3)
+*/
+
+function a(num1, num2) {
+	return num1 + num2
+}
+
+console.log(a(3, 4))
+
+function b(num) {
+	return num * 2
+}
+
+console.log(b(a(3, 4)))
+console.log(b(7))
