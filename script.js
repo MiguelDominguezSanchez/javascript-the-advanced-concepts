@@ -1638,6 +1638,7 @@ console.log(sam.attack())
 ///////////////////////
 // 6.10 Object.create vs Class
 
+/*
 // new binding this
 function Person(name, age) {
 	this.name = name
@@ -1680,3 +1681,52 @@ const person4 = {
 }
 
 console.log(person4.hi())
+*/
+
+///////////////////////
+// 6.12 Inheritance
+
+class Character {
+	constructor(name, weapon) {
+		this.name = name
+		this.weapon = weapon
+	}
+	attack() {
+		return 'attack with ' + this.weapon
+	}
+}
+
+class Elf extends Character {
+	constructor(name, weapon, type) {
+		super(name, weapon)
+		this.type = type
+		console.log(this)
+	}
+}
+
+class Ogre extends Character {
+	constructor(name, weapon, color) {
+		super(name, weapon)
+		this.color = color
+	}
+	makeFort() {
+		return 'strongest fort in the world made'
+	}
+}
+
+// const fiona = new Elf('Fiona', 'ninja stars')
+const dolby = new Elf('Dolby', 'cloth', 'house')
+// console.log(fiona)
+// const ogre = { ...fiona }
+// console.log(ogre)
+// console.log(ogre.__proto__)
+// console.log(fiona.__proto__)
+// console.log(fiona === ogre)
+// console.log(ogre.attack())
+// console.log(fiona)
+// console.log(dolby)
+console.log(dolby.attack)
+// console.log(dolby.makeFort())
+const shrek = new Ogre('Shrek', 'club', 'green')
+// console.log(shrek)
+console.log(shrek.makeFort())
