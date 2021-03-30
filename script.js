@@ -1686,6 +1686,7 @@ console.log(person4.hi())
 ///////////////////////
 // 6.12 Inheritance
 
+/*
 class Character {
 	constructor(name, weapon) {
 		this.name = name
@@ -1737,3 +1738,7 @@ console.log(shrek.makeFort())
 console.log(dolby instanceof Elf)
 console.log(dolby instanceof Ogre)
 console.log(dolby instanceof Character)
+*/
+
+///////////////////////
+// 6.14 Public vs Private
