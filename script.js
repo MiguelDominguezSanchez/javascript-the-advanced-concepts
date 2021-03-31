@@ -1987,6 +1987,7 @@ console.log('2', memoized(5))
 
 ///////////////////////
 // 7.16 Compose and Pipe
+/*
 fn1(fn3(fn3(50)))
 compose(fn1, fn2, fn3)(50)
 pipe(fn3, fn2, fn1)(50)
@@ -2001,3 +2002,205 @@ const makePositive = num => Math.abs(num)
 const multiplyBy3AndAbsolute = compose(multiplyBy3, makePositive)
 
 console.log(multiplyBy3AndAbsolute(-50))
+*/
+
+///////////////////////
+// 7.17 Arity
+/*
+// arity
+
+fn1(fn3(fn3(50)))
+compose(fn1, fn2, fn3)(50)
+pipe(fn3, fn2, fn1)(50)
+// Compose
+// Pipe
+// data --> fn --> data --> fn -->
+
+const compose = (f, g) => data => f(g(data))
+const pipe = (f, g) => data => g(f(data))
+const multiplyBy3 = num => num * 3
+const makePositive = num => Math.abs(num)
+const multiplyBy3AndAbsolute = compose(multiplyBy3, makePositive)
+
+console.log(multiplyBy3AndAbsolute(-50))
+*/
+
+///////////////////////
+// 7.19 Solution Amazon
+/*
+// Amazon shopping
+const user = {
+	name: 'Kim',
+	active: true,
+	cart: [],
+	purchases: [],
+}
+let amazonHistory = []
+const compose = (f, g) => (...args) => f(g(...args))
+
+purchaseItem(
+	emptyCart,
+	buyItem,
+	applyTaxToItems,
+	addItemToCart
+)(user, { name: 'laptop', price: 200 })
+
+function purchaseItem(...fns) {
+	return fns.reduce(compose)
+}
+
+function addItemToCart(user, item) {
+	amazonHistory.push(user)
+	const updateCart = user.cart.concat(item)
+	return Object.assign({}, user, { cart: updateCart })
+}
+
+function applyTaxToItems(user) {
+	amazonHistory.push(user)
+	const { cart } = user
+	const taxRate = 1.3
+	const updateCart = cart.map(item => {
+		return {
+			name: item.name,
+			price: item.price * taxRate,
+		}
+	})
+	return Object.assign({}, user, { cart: updateCart })
+}
+
+function buyItem(user) {
+	amazonHistory.push(user)
+	return Object.assign({}, user, { purchases: user.cart })
+}
+
+function emptyCart(user) {
+	amazonHistory.push(user)
+	return Object.assign({}, user, { cart: [] })
+}
+*/
+
+// Implement a cart feature:
+// 1. Add items to cart.
+// 2. Add 3% tax to item in cart
+// 3. Buy item: cart --> purchases
+// 4. Empty cart
+
+/*
+{
+  name: 'Kim',
+  active: true,
+  cart: [],
+  purchases: [ { name: 'laptop', price: 260 } ]
+}
+*/
+
+// function refundItem() {}
+
+/*
+amazonHistory
+*/
+
+/*
+[
+  { name: 'Kim', active: true, cart: [], purchases: [] },
+  { name: 'Kim', active: true, cart: [ [Object] ], purchases: [] },
+  { name: 'Kim', active: true, cart: [ [Object] ], purchases: [] },
+  {
+    name: 'Kim',
+    active: true,
+    cart: [ [Object] ],
+    purchases: [ [Object] ]
+  }
+]
+*/
+
+// function getUserState() {}
+// function goForward() {}
+
+///////////////////////////////
+
+// Amazon shopping
+const user = {
+	name: 'Kim',
+	active: true,
+	cart: [],
+	purchases: [],
+}
+let amazonHistory = []
+const pipe = (f, g) => (...args) => g(f(...args))
+
+purchaseItem(
+	emptyCart,
+	buyItem,
+	applyTaxToItems,
+	addItemToCart
+)(user, { name: 'laptop', price: 200 })
+
+function purchaseItem(...fns) {
+	return fns.reduce(pipe)
+}
+
+function addItemToCart(user, item) {
+	amazonHistory.push(user)
+	const updateCart = user.cart.concat(item)
+	return Object.assign({}, user, { cart: updateCart })
+}
+
+function applyTaxToItems(user) {
+	amazonHistory.push(user)
+	const { cart } = user
+	const taxRate = 1.3
+	const updateCart = cart.map(item => {
+		return {
+			name: item.name,
+			price: item.price * taxRate,
+		}
+	})
+	return Object.assign({}, user, { cart: updateCart })
+}
+
+function buyItem(user) {
+	amazonHistory.push(user)
+	return Object.assign({}, user, { purchases: user.cart })
+}
+
+function emptyCart(user) {
+	amazonHistory.push(user)
+	return Object.assign({}, user, { cart: [] })
+}
+
+// Implement a cart feature:
+// 1. Add items to cart.
+// 2. Add 3% tax to item in cart
+// 3. Buy item: cart --> purchases
+// 4. Empty cart
+
+/*
+{
+  name: 'Kim',
+  active: true,
+  cart: [],
+  purchases: [ { name: 'laptop', price: 260 } ]
+}
+*/
+
+// function refundItem() {}
+
+amazonHistory
+
+/*
+[
+  { name: 'Kim', active: true, cart: [], purchases: [] },
+  { name: 'Kim', active: true, cart: [ [Object] ], purchases: [] },
+  { name: 'Kim', active: true, cart: [ [Object] ], purchases: [] },
+  {
+    name: 'Kim',
+    active: true,
+    cart: [ [Object] ],
+    purchases: [ [Object] ]
+  }
+]
+*/
+
+// function getUserState() {}
+// function goForward() {}
