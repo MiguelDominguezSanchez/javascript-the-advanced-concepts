@@ -1906,6 +1906,7 @@ console.log(getCounter())
 ///////////////////////
 // 7.11 Currying
 
+/*
 // currying
 const multiply = (a, b) => a * b
 // console.log(multiply(3, 4))
@@ -1918,3 +1919,12 @@ const curriedMultiplyBy5 = curriedMultiply(5)
 console.log(curriedMultiplyBy5(4))
 console.log(curriedMultiplyBy5(4))
 console.log(curriedMultiplyBy5(4))
+*/
+
+///////////////////////
+// 7.12 Partial Application
+
+// Partial Application
+const multiply = (a, b, c) => a * b * c
+const curriedMultiplyBy5 = multiply.bind(null, 5)
+console.log(curriedMultiplyBy5(4, 10))
