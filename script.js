@@ -1960,8 +1960,9 @@ console.log('2', memoizedAddTo80(6))
 */
 
 ///////////////////////
-// 7.14 MCI Memoization 2
+// 7.15 MCI Memoization 2
 
+/*
 function addTo80(n) {
 	console.log('long time')
 	return n + 80
@@ -1982,3 +1983,21 @@ const memoized = memoizedAddTo80()
 
 console.log('1', memoized(5))
 console.log('2', memoized(5))
+*/
+
+///////////////////////
+// 7.16 Compose and Pipe
+fn1(fn3(fn3(50)))
+compose(fn1, fn2, fn3)(50)
+pipe(fn3, fn2, fn1)(50)
+// Compose
+// Pipe
+// data --> fn --> data --> fn -->
+
+const compose = (f, g) => data => f(g(data))
+const pipe = (f, g) => data => g(f(data))
+const multiplyBy3 = num => num * 3
+const makePositive = num => Math.abs(num)
+const multiplyBy3AndAbsolute = compose(multiplyBy3, makePositive)
+
+console.log(multiplyBy3AndAbsolute(-50))
