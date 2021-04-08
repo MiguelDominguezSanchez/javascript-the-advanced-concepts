@@ -2616,3 +2616,9 @@ export default function fight(char1, char2) {
 
 ///////////////////////////////
 // 10.7 Section Review
+
+///////////////////////////////
+// 10.Error Handling
+
+///////////////////////////////
+// 10.1 Section Overview
