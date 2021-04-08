@@ -2599,6 +2599,7 @@ import module1 from 'module1' // {fight}
 import module2 from 'module2'
 */
 
+/*
 const harry = 'potter'
 const voldemort = 'He who must not be named'
 
@@ -2611,3 +2612,7 @@ export default function fight(char1, char2) {
 	const attack2 = Math.floor(Math.random() * char2.length)
 	return attack1 > attack2 ? `${char1} wins` : `${char2} wins`
 }
+*/
+
+///////////////////////////////
+// 10.7 Section Review
