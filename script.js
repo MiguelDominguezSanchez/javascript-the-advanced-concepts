@@ -2622,3 +2622,6 @@ export default function fight(char1, char2) {
 
 ///////////////////////////////
 // 10.1 Section Overview
+
+///////////////////////////////
+// 10.2 Errors in Javascript
