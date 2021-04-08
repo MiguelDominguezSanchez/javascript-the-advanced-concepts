@@ -2403,6 +2403,7 @@ Promise.all(
 */
 
 // for await of
+/*
 const urls = [
 	'https://jsonplaceholder.typicode.com/users',
 	'https://jsonplaceholder.typicode.com/postss',
@@ -2421,7 +2422,7 @@ const getData = async function () {
 		console.log('oops', err)
 	}
 }
-
+*/
 /*
 const loopThroughUrls = url => {
 	for (url of urls) {
@@ -2430,7 +2431,7 @@ const loopThroughUrls = url => {
 }
 console.log(loopThroughUrls(urls))
 */
-
+/*
 const getData2 = async function () {
 	const arrayOfPromises = urls.map(url => fetch(url))
 	for await (let request of arrayOfPromises) {
@@ -2438,3 +2439,60 @@ const getData2 = async function () {
 		console.log(data)
 	}
 }
+*/
+
+///////////////////////////////
+// 9.9 Parallel, Sequence and Race
+
+// 3
+// parallel
+// sequencial
+// race
+
+/*
+const promisify = (item, delay) =>
+	new Promise(resolve => setTimeout(() => resolve(item), delay))
+
+const a = () => promisify('a', 100)
+const b = () => promisify('b', 5000)
+const c = () => promisify('c', 3000)
+// console.log(a(), b(), c())
+async function parallel() {
+	const promises = [a(), b(), c()]
+	const [output1, output2, output3] = await Promise.all(promises)
+	return `parallel is done: ${output1} ${output2} ${output3}`
+}
+
+async function race() {
+	const promises = [a(), b(), c()]
+	const output1 = await Promise.race(promises)
+	return `race is done: ${output1}`
+}
+
+async function sequence() {
+	const output1 = await a()
+	const output2 = await b()
+	const output3 = await c()
+	return `sequence is done ${output1} ${output2} ${output3}`
+}
+
+sequence().then(console.log)
+parallel().then(console.log)
+race().then(console.log)
+*/
+
+///////////////////////////////
+// 9.10 Threads, Concurrency and Parallelism
+
+/*
+var worker = new Worker('worker.js')
+worker.postMessage('Hellloooo')
+
+addEventListener('message')
+*/
+
+// fetch()
+
+const { spawn } = require('child_process')
+
+spawn('git', ['stuff'])
