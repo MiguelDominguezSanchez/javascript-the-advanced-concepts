@@ -2567,6 +2567,7 @@ var fightModule = (function () {
 // 10.5 Common JS, AMD, UMD
 // CommonJS and AMD Asynchronous Module Definition
 
+/*
 var module1 = require('module1') //.fight;
 var module2 = require('module2') //.importedFunc2
 
@@ -2588,3 +2589,25 @@ define(['module1', 'module2'], function (module1Import, module2Import) {
 		dance: dance,
 	}
 })
+*/
+
+///////////////////////////////
+// 10.6 ES6 Modules
+
+/*
+import module1 from 'module1' // {fight}
+import module2 from 'module2'
+*/
+
+const harry = 'potter'
+const voldemort = 'He who must not be named'
+
+export function jump() {
+	console.log('jump')
+}
+
+export default function fight(char1, char2) {
+	const attack1 = Math.floor(Math.random() * char1.length)
+	const attack2 = Math.floor(Math.random() * char2.length)
+	return attack1 > attack2 ? `${char1} wins` : `${char2} wins`
+}
