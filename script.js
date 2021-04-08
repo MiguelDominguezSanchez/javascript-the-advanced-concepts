@@ -2542,6 +2542,7 @@ console.log(fight(harry, voldemort))
 
 // IIFE
 // Module Pattern
+/*
 var fightModule = (function () {
 	var harry = 'potter'
 	var voldemort = 'He who must not be named'
@@ -2557,3 +2558,7 @@ var fightModule = (function () {
 		fight: fight,
 	}
 })()
+*/
+
+///////////////////////////////
+// 10.4 Module Pattern Pros and Cons
