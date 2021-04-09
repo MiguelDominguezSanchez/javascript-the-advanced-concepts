@@ -2750,3 +2750,22 @@ Promise.resolve('asyncfail')
 */
 
 // async await
+
+///////////////////////////////
+// 11.5 Async Error Handling 2
+/*
+;(async function () {
+	try {
+		await Promise.resolve('oopsie #1')
+		await Promise.reject('oopsie #2')
+	} catch (err) {
+		console.log(err)
+	}
+	console.log('is this still good?')
+})()
+*/
+;(async function () {
+	await Promise.resolve('oopsie #1')
+	await Promise.reject('oopsie #2')
+	console.log('is this still good?')
+})()
