@@ -2773,7 +2773,7 @@ Promise.resolve('asyncfail')
 */
 ///////////////////////////////
 // 11.6 Extending Errors
-
+/*
 class AuthenticationError extends Error {
 	constructor(message) {
 		super(message)
@@ -2799,3 +2799,7 @@ class PermissionError extends Error {
 const a = new DataBaseError('oopsie')
 // console.log(a.message)
 console.log(a instanceof DataBaseError)
+*/
+
+///////////////////////////////
+// 11.8 Section Review
