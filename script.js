@@ -2668,6 +2668,7 @@ try {
 }
 */
 
+/*
 var fakevariable = true
 
 try {
@@ -2677,3 +2678,75 @@ try {
 } catch (e) {
 	console.log('got it', e)
 }
+*/
+
+///////////////////////////////
+// 11.3 try Catch
+
+/*
+var fakevariable = true
+
+try {
+	setTimeout(function () {
+		fakevariable
+	}, 1000)
+} catch (e) {
+	console.log('got it', e)
+}
+*/
+
+// .catch()
+
+/*
+Promise.resolve('asyncfail')
+	.then(response => {
+		// console.log(response)
+		throw new Error('#1 fail')
+		return response
+	})
+	.then(response => {
+		console.log(response)
+	})
+	.catch(err => {
+		// console.log(err)
+		// return err
+		throw new Error('#2')
+	})
+	.then(response => {
+		console.log(response.message)
+	})
+	.catch(err => {
+		console.log('final error')
+	})
+	*/
+
+/*
+Promise.resolve('asyncfail')
+	.then(response => {
+		throw new Error('#1 fail')
+		return response
+	})
+	.then(response => {
+		console.log(response)
+	})
+*/
+
+/*
+Promise.resolve('asyncfail')
+	.then(response => {
+		Promise.resolve()
+			.then(() => {
+				throw new Error('#3 fail')
+			})
+			.catch(console.log)
+		return 5
+	})
+	.then(response => {
+		console.log(response)
+	})
+	.catch(err => {
+		console.log('final error', err)
+	})
+*/
+
+// async await
