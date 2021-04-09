@@ -2764,8 +2764,38 @@ Promise.resolve('asyncfail')
 	console.log('is this still good?')
 })()
 */
+/*
 ;(async function () {
 	await Promise.resolve('oopsie #1')
 	await Promise.reject('oopsie #2')
 	console.log('is this still good?')
 })()
+*/
+///////////////////////////////
+// 11.6 Extending Errors
+
+class AuthenticationError extends Error {
+	constructor(message) {
+		super(message)
+		this.name = 'AuthenticationError'
+		this.favouriteSnack = 'grapes'
+	}
+}
+class DataBaseError extends Error {
+	constructor(message) {
+		super(message)
+		this.name = 'DataBaseError'
+		this.message = 'grapes'
+	}
+}
+class PermissionError extends Error {
+	constructor(message) {
+		super(message)
+		this.name = 'PermissionError'
+		this.favouriteSnack = 'grapes'
+	}
+}
+
+const a = new DataBaseError('oopsie')
+// console.log(a.message)
+console.log(a instanceof DataBaseError)
