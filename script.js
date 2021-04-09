@@ -2618,10 +2618,62 @@ export default function fight(char1, char2) {
 // 10.7 Section Review
 
 ///////////////////////////////
-// 10.Error Handling
+// 11.Error Handling
 
 ///////////////////////////////
-// 10.1 Section Overview
+// 11.1 Section Overview
 
 ///////////////////////////////
-// 10.2 Errors in Javascript
+// 11.2 Errors in Javascript
+
+///////////////////////////////
+// 11.3 try Catch
+/*
+try {
+} catch {}
+*/
+/*
+catch()
+*/
+
+/*
+function fail() {
+	try {
+		throw new Error('oopsie!!!')
+		console.log('this works')
+	} catch (error) {
+		// console.log('we have made an oopsie', error)
+		// console.log(error.name)
+		// con/sole.log(error.stack)
+		console.log(error.message)
+	} finally {
+		console.log('still good')
+		return 'returning fail'
+	}
+	console.log('!!!!!!!!!!!!:)')
+}
+
+console.log(fail())
+*/
+
+/*
+try {
+	try {
+		something()
+	} catch (e) {
+		throw new Error(e)
+	}
+} catch (e) {
+	console.log('got it', err)
+}
+*/
+
+var fakevariable = true
+
+try {
+	setTimeout(function () {
+		fakevariable
+	}, 1000)
+} catch (e) {
+	console.log('got it', e)
+}
