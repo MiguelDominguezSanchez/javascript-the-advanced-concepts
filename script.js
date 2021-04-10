@@ -2803,3 +2803,18 @@ console.log(a instanceof DataBaseError)
 
 ///////////////////////////////
 // 11.8 Section Review
+
+///////////////////////////////
+// 14. Appendix I Javascript Basics
+
+///////////////////////////////
+// 14.3. Your First Javascript
+
+// JAVASCRIPT TYPES
+
+// 1. Number
+// 2. String
+// 3. Boolean
+// 4. Undefined
+// 5. Null
+// 6. Symbol (new in ECMAscript 6)
