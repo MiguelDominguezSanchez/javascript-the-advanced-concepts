@@ -2818,3 +2818,40 @@ console.log(a instanceof DataBaseError)
 // 4. Undefined
 // 5. Null
 // 6. Symbol (new in ECMAscript 6)
+
+///////////////////////////////
+// 14.4 Variables
+/*
+var george = 'These pretzels are making me thirsty' + '!'
+console.log(george)
+
+// var 3 = 3
+
+// var three = 3
+
+// var firstName
+
+// console.log(prompt('What is your username'))
+
+var first = prompt('enter first number')
+var second = prompt('enter second number')
+// console.log(first)
+// console.log(second)
+
+// console.log(Number(first))
+// var sum = Number(first) + Number(second)
+
+// console.log(sum)
+// alert('hi there!')
+var sum = Number(first) + Number(second)
+// alert(sum)
+alert('The sum is:' + sum)
+*/
+
+var a = true
+console.log(a)
+a = 'Hello'
+console.log(a)
+var b
+console.log(b)
+var password
