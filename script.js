@@ -2819,6 +2819,26 @@ console.log(a instanceof DataBaseError)
 // 5. Null
 // 6. Symbol (new in ECMAscript 6)
 
+// JAVASCRIPT VARIABLES
+
+// var
+// let (new in ECCMAScript 6)
+// const (new in ECMAScript 6)
+
+// JAVASCRIPT CONDITIONALS
+
+// if
+// else
+// else if
+// ternary operator
+// switch
+
+// JAVASCRIPT LOGICAL OPERATORS
+
+// &&
+// ||
+// !
+
 ///////////////////////////////
 // 14.4 Variables
 /*
@@ -2848,6 +2868,7 @@ var sum = Number(first) + Number(second)
 alert('The sum is:' + sum)
 */
 
+/*
 var a = true
 console.log(a)
 a = 'Hello'
@@ -2855,3 +2876,78 @@ console.log(a)
 var b
 console.log(b)
 var password
+*/
+
+///////////////////////////////
+// 14.5 Control Flow
+/*
+var name = 'Billy'
+if (name === 'Billy') {
+	alert('hi Billy')
+}
+
+name = 'Susy'
+if (name === 'Billy') {
+	alert('hi Billy')
+}
+
+if (name === 'Billy') {
+	alert('hi Billy')
+} else {
+	alert('hmmm I dont know you')
+}
+
+name = 'Billy'
+
+if (name === 'Billy') {
+	alert('hi Billy')
+} else {
+	alert('hmmm I dont know you')
+}
+*/
+
+/*
+name = 'Susy'
+
+if (name === 'Billy') {
+	alert('hi Billy')
+} else if (name === 'Susy') {
+	alert('hi Susy!')
+} else {
+	alert('I dont know you')
+}
+*/
+
+/*
+// name = 'Billy'
+name = 'Ann'
+
+if (name === 'Billy' || name === 'Ann') {
+	alert('Hi Billy or Ann')
+}
+*/
+
+/*
+name = 'Ann'
+
+if (name === 'Billy' && name === 'Ann') {
+	alert('Hi Billy or Ann')
+}
+*/
+
+/*
+var firstName = 'Bob'
+var lastName = 'Smith'
+var lastName = 'Jones'
+
+if (firstName === 'Bob' && lastName === 'Smith') {
+	alert('hi Bob Smith')
+}
+*/
+
+if (!(name === 'Bob')) {
+	alert('Hi Bob')
+}
+
+console.log(!true)
+console.log(!false)
