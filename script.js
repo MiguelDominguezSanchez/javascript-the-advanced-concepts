@@ -3164,7 +3164,7 @@ valueOf() 	Returns the primitive value of an array
 
 ///////////////////////
 // 14.9 Data Structures Objects
-
+/*
 var user = {
 	name: 'John',
 	age: 34,
@@ -3183,16 +3183,16 @@ console.log(user.name)
 console.log(user.age)
 console.log(user.hobby)
 console.log(user.isMarried)
-
+*/
 // list.pop()
 // list.push()
 // list.concat()
-
+/*
 user.favouriteFood = 'spinach'
 console.log(user)
 user.isMarried = true
 console.log(user)
-
+*/
 /*
 var user = {
 	0: 'John',
@@ -3201,7 +3201,7 @@ var user = {
 	3: false,
 }
 */
-
+/*
 var user = {
 	name: 'John',
 	age: 34,
@@ -3223,6 +3223,7 @@ var list = [
 		password: '123',
 	},
 ]
+*/
 /*
 console.log(list)
 
@@ -3254,3 +3255,37 @@ console.log(nullObj)
 nullObj.name = 'Andy'
 emptyObj.name = 'Andy'
 */
+
+///////////////////////
+// 14.10 Exercise Build Facebook
+
+var database = [
+	{
+		username: 'andrei',
+		password: 'supersecret',
+	},
+]
+
+var newsFeed = [
+	{
+		username: 'Bobby',
+		timeline: 'So tired from all that learning!',
+	},
+	{
+		username: 'Sally',
+		timeline: 'Javascript is soooo coool!',
+	},
+]
+
+var userNamePrompt = prompt('What´s your username?')
+var passwordPrompt = prompt('What´s your password?')
+
+function signIn(user, pass) {
+	if (user === database[0].username && pass === database[0].password) {
+		console.log(newsFeed)
+	} else {
+		alert('Sorry, wrong username and password!')
+	}
+}
+
+console.log(signIn(userNamePrompt, passwordPrompt))
