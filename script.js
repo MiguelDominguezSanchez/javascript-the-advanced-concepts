@@ -3072,3 +3072,185 @@ alert(total)
 parameters
 arguments
 */
+
+///////////////////////
+// 5.8 Data Structures Arrays
+/*
+var list = ['tiger', 'cat', 'bear', 'bird']
+console.log(list[1])
+
+var numbers = [1, 2, 3, 4]
+
+var booleans = [true, false, true]
+
+var functionList = [
+	function apple() {
+		console.log('apple')
+	},
+]
+
+console.log(functionList)
+
+var mixedList = [
+	'apples',
+	3,
+	undefined,
+	true,
+	function apple() {
+		console.log('apples')
+	},
+]
+
+console.log(mixedList)
+
+var list = [['tiger', 'cat', 'bear', 'bird']]
+
+console.log(list[0])
+console.log(list)
+console.log(list[0][2])
+*/
+/*
+var list = ['tiger', 'cat', 'bear', 'bird']
+
+console.log(list)
+console.log(list.shift())
+console.log(list)
+console.log(list.pop())
+console.log(list)
+console.log(list.push('elephant'))
+console.log(list)
+console.log(list.concat(['bee', 'deer']))
+
+console.log(list.sort())
+
+var myList = ['cat', 'bear', 'elephant', 'bee', 'deer']
+var myNewList = myList.concat(['monkey'])
+console.log(myList)
+console.log(myNewList)
+
+Array Methods
+Method 	Description
+concat() 	Joins two or more arrays, and returns a copy of the joined arrays
+copyWithin() 	Copies array elements within the array, to and from specified positions
+entries() 	Returns a key/value pair Array Iteration Object
+every() 	Checks if every element in an array pass a test
+fill() 	Fill the elements in an array with a static value
+filter() 	Creates a new array with every element in an array that pass a test
+find() 	Returns the value of the first element in an array that pass a test
+findIndex() 	Returns the index of the first element in an array that pass a test
+forEach() 	Calls a function for each array element
+from() 	Creates an array from an object
+includes() 	Check if an array contains the specified element
+indexOf() 	Search the array for an element and returns its position
+isArray() 	Checks whether an object is an array
+join() 	Joins all elements of an array into a string
+keys() 	Returns a Array Iteration Object, containing the keys of the original array
+lastIndexOf() 	Search the array for an element, starting at the end, and returns its position
+map() 	Creates a new array with the result of calling a function for each array element
+pop() 	Removes the last element of an array, and returns that element
+push() 	Adds new elements to the end of an array, and returns the new length
+reduce() 	Reduce the values of an array to a single value (going left-to-right)
+reduceRight() 	Reduce the values of an array to a single value (going right-to-left)
+reverse() 	Reverses the order of the elements in an array
+shift() 	Removes the first element of an array, and returns that element
+slice() 	Selects a part of an array, and returns the new array
+some() 	Checks if any of the elements in an array pass a test
+sort() 	Sorts the elements of an array
+splice() 	Adds/Removes elements from an array
+toString() 	Converts an array to a string, and returns the result
+unshift() 	Adds new elements to the beginning of an array, and returns the new length
+valueOf() 	Returns the primitive value of an array
+*/
+
+///////////////////////
+// 14.9 Data Structures Objects
+
+var user = {
+	name: 'John',
+	age: 34,
+	hobby: 'Soccer',
+	isMarried: false,
+}
+
+console.log(user)
+
+var list = ['apple', 'banana', 'orange']
+
+console.log(list)
+
+console.log(list[1])
+console.log(user.name)
+console.log(user.age)
+console.log(user.hobby)
+console.log(user.isMarried)
+
+// list.pop()
+// list.push()
+// list.concat()
+
+user.favouriteFood = 'spinach'
+console.log(user)
+user.isMarried = true
+console.log(user)
+
+/*
+var user = {
+	0: 'John',
+	1: 34,
+	2: 'Soccer',
+	3: false,
+}
+*/
+
+var user = {
+	name: 'John',
+	age: 34,
+	hobby: 'Soccer',
+	isMarried: false,
+	spells: ['abrakadabra', 'shazam', 'boo'],
+	shout: function () {
+		console.log('AHHHHH!')
+	},
+}
+
+var list = [
+	{
+		username: 'andy',
+		password: 'secret',
+	},
+	{
+		username: 'jess',
+		password: '123',
+	},
+]
+/*
+console.log(list)
+
+console.log(user.spells)
+console.log(user.spells[1])
+
+console.log(list[0].password)
+*/
+
+/*
+console.log(user)
+console.log(user.shout())
+list.pop()
+console.log(console)
+console.info('hello')
+console.error('ahhh')
+user2 = {}
+console.log(user2)
+list2 = []
+console.log(list2)
+console.log(list2[0])
+*/
+
+/*
+var emptyObj = {}
+var nullObj = null
+console.log(emptyObj)
+console.log(nullObj)
+nullObj.name = 'Andy'
+emptyObj.name = 'Andy'
+*/
