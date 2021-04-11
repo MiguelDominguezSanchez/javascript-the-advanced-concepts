@@ -3258,7 +3258,7 @@ emptyObj.name = 'Andy'
 
 ///////////////////////
 // 14.10 Exercise Build Facebook
-
+/*
 var database = [
 	{
 		username: 'andrei',
@@ -3289,3 +3289,40 @@ function signIn(user, pass) {
 }
 
 console.log(signIn(userNamePrompt, passwordPrompt))
+*/
+
+///////////////////////
+// 14.11 Javascript Terminology
+
+// function declaration
+// function newFunction() {}
+
+// function expression
+/*
+var newFunction = function name() {
+
+}
+*/
+var newFunction = function () {}
+
+// expression
+// 1 + 3
+// var a = 2
+// return true
+
+//calling or invoking a functiion
+// alert()
+// newFunction(param1, param2)
+
+//assign a variable
+var a = true
+
+// function vs method
+function thisIsAFunction() {}
+
+var obj = {
+	thisIsAMethod: function () {},
+}
+
+thisIsAFunction()
+obj.thisIsAMethod()
