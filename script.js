@@ -1,6 +1,8 @@
 ///////////////////////
 // 3.3 Lexical Environment
 
+// const { string } = require('prop-types')
+
 /*
 function printName() {
 	return 'Andrei Neagoie'
@@ -2839,6 +2841,25 @@ console.log(a instanceof DataBaseError)
 // ||
 // !
 
+// JAVASCRIPT FUNCTIONS
+
+// var a = function name() {}
+// function name() {}
+// return
+// () => (new in ecMAScript 6)
+
+// JAVASCRIPT DATA STRUCTURES
+
+// Array
+// Object
+
+// JAVASCRIPT LOOPING
+
+// for
+// while
+// do
+// forEach (new in ECMAScript 5)
+
 ///////////////////////////////
 // 14.4 Variables
 /*
@@ -2945,9 +2966,109 @@ if (firstName === 'Bob' && lastName === 'Smith') {
 }
 */
 
+/*
 if (!(name === 'Bob')) {
 	alert('Hi Bob')
 }
 
 console.log(!true)
 console.log(!false)
+*/
+
+///////////////////////////////
+// 14.6 Javascript in Our Website
+
+/*
+4 + 3
+
+if (4 + 3 === 7) {
+	alert('You´re smart!')
+}
+*/
+
+///////////////////////////////
+// 14.7 Functions
+// alert()
+// prompt()
+
+// console.log('Hellooooo', 'How are you')
+/*
+function sayHello() {
+	console.log('Hello')
+}
+
+sayHello()
+
+var sayBye = function () {
+	console.log('Bye')
+}
+
+console.log(sayBye())
+*/
+
+/*
+function sing() {
+	console.log('AHHHHHHHH')
+	console.log('TEEEEEEEE')
+}
+
+console.log(sing())
+
+function sing2() {
+	console.log('laaa deee daaa')
+	console.log('laaaaaaaaaaaaa')
+}
+
+console.log(sing2())
+*/
+
+/*
+function sing(song) {
+	console.log(song)
+}
+
+console.log(sing('Laaa deee daaa'))
+console.log(sing('helloooooooo'))
+console.log(sing('backstreets back alright'))
+*/
+/*
+function multiply(a, b) {
+	if (a > 10 || b > 10) {
+		return 'that´s too hard'
+	} else {
+		return a * b
+	}
+}
+
+console.log(multiply(5, 40))
+*/
+
+/*
+var a = function (a, b) {
+	if (a > 10 || b > 10) {
+		return 'that´s too hard'
+	} else {
+		return a * b
+	}
+}
+
+console.log(a())
+*/
+/*
+function multiply(a, b) {
+	return a * b
+}
+
+alert(multiply(3, 4))
+*/
+/*
+function multiply(a, b) {
+	return a * b
+}
+
+var total = multiply(4, 5)
+alert(total)
+
+parameters
+arguments
+*/
