@@ -3504,3 +3504,55 @@ while
 with
 yield
 */
+
+///////////////////////
+// 15.2 Scope
+
+// function aa() {
+// 	console.log('test')
+// }
+
+// window.aa()
+/*
+var b = 'Can I access this?'
+function bb() {
+	var a = 'hello'
+}
+*/
+
+// Root Scope (window)
+/*
+var fun = 5
+
+function funFunction() {
+	// child scope
+	var fun = 'hellooo'
+	console.log(1, fun)
+}
+
+function funerFunction() {
+	// child scope
+	var fun = 'Byee'
+	console.log(2, fun)
+}
+
+function funestFunction() {
+	// child scope
+	fun = 'AHhHHHHH'
+	console.log(3, fun)
+}
+
+console.log('window', fun)
+funFunction()
+funerFunction()
+funestFunction()
+
+console.log(fun)
+*/
+
+// var fun = 5
+
+function funestFunction() {
+	// child scope
+	console.log(fun)
+}
