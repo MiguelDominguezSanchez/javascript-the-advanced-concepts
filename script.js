@@ -3303,7 +3303,7 @@ var newFunction = function name() {
 
 }
 */
-var newFunction = function () {}
+// var newFunction = function () {}
 
 // expression
 // 1 + 3
@@ -3315,9 +3315,10 @@ var newFunction = function () {}
 // newFunction(param1, param2)
 
 //assign a variable
-var a = true
+// var a = true
 
 // function vs method
+/*
 function thisIsAFunction() {}
 
 var obj = {
@@ -3326,3 +3327,81 @@ var obj = {
 
 thisIsAFunction()
 obj.thisIsAMethod()
+*/
+
+///////////////////////
+// 14.12 Loops
+
+var todos = [
+	'clean room',
+	'brush teeth',
+	'exercise',
+	'study javascript',
+	'eat healthy',
+]
+
+var todosImportant = [
+	'clean room!',
+	'brush teeth!',
+	'exercise!',
+	'study javascript!',
+	'eat healthy!',
+]
+
+/*
+for (var i = 0; i < todos.length; i++) {
+	console.log(i)
+}
+*/
+// console.log(todos.length)
+
+/*
+for (var i = 0; i < todos.length; i++) {
+	console.log(todos[i] + '!')
+}
+*/
+
+/*
+for (var i = 0; i < todos.length; i++) {
+	todos[i] = todos[i] + '!'
+}
+
+console.log(todos)
+*/
+var todosLength = todos.length
+for (var i = 0; i < todosLength; i++) {
+	console.log(todos[i])
+}
+
+// todos.forEach(function (todo, i) {
+// 	console.log(todo, i)
+// })
+
+function logTodos(todo, i) {
+	console.log(todo, i)
+}
+
+todos.forEach(logTodos)
+todosImportant.forEach(logTodos)
+
+/*
+var counterOne = 0
+while (counterOne < 10) {
+	console.log(counterOne)
+	counterOne++
+}
+*/
+
+/*
+var counterOne = 10
+while (counterOne > 0) {
+	console.log('while', counterOne)
+	counterOne--
+}
+
+var counterTwo = 10
+do {
+	console.log('do while', counterTwo)
+	counterTwo--
+} while (counterTwo > 0)
+*/
