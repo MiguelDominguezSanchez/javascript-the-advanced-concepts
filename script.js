@@ -3952,6 +3952,7 @@ object3.value
 // }
 // a()
 
+/*
 const object4 = {
 	a: function () {
 		console.log(this)
@@ -4003,3 +4004,25 @@ wizard1.play = function () {
 wizard2.play = function () {
 	console.log(`WEEEEE I´m a ${this.type}`)
 }
+*/
+
+///////////////////////
+// 15.8 ES7
+
+// includes()
+
+// console.log('Hellooooo'.includes('o'))
+
+const pets = ['cat', 'dog', 'bat']
+
+console.log(pets.includes('dog'))
+console.log(pets.includes('birds'))
+
+const square = x => x ** 2
+const cube = y => y ** 3
+
+console.log(square(2))
+console.log(square(5))
+
+console.log(cube(3))
+console.log(cube(4))
