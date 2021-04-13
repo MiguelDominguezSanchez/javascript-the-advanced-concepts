@@ -3873,16 +3873,16 @@ function b() {
 */
 
 ///////////////////////
-// 15.6 Advanced Arrrays
+// 15.6 Advanced Arrays
 
-const array = [1, 2, 10, 16]
+// const array = [1, 2, 10, 16]
 
-const double = []
-const newArray = array.forEach(num => {
-	double.push(num * 2)
-})
+// const double = []
+// const newArray = array.forEach(num => {
+// 	double.push(num * 2)
+// })
 
-console.log('forEach', double)
+// console.log('forEach', double)
 
 // map, filter, reduce
 
@@ -3890,9 +3890,9 @@ console.log('forEach', double)
 // 	return num * 2
 // })
 
-const mapArray = array.map(num => num * 2)
+// const mapArray = array.map(num => num * 2)
 
-console.log('map', mapArray)
+// console.log('map', mapArray)
 
 // filter
 
@@ -3900,9 +3900,9 @@ console.log('map', mapArray)
 // 	return num > 5
 // })
 
-const filterArray = array.filter(num => num === 5)
+// const filterArray = array.filter(num => num === 5)
 
-console.log('filter', filterArray)
+// console.log('filter', filterArray)
 
 // reduce
 /*
@@ -3910,8 +3910,96 @@ const reduceArray = array.reduce((accumulator, num) => {
 	return accumulator + num
 }, 0)
 */
-const reduceArray = array.reduce((accumulator, num) => {
-	return accumulator + num
-}, 5)
+// const reduceArray = array.reduce((accumulator, num) => {
+// 	return accumulator + num
+// }, 5)
 
-console.log('reduce', reduceArray)
+// console.log('reduce', reduceArray)
+
+///////////////////////
+// 15.7 Advanced Objects
+
+// reference type
+
+/*
+var object1 = { value: 10 }
+var object2 = object1
+var object3 = { value: 10 }
+
+object1 === object2
+true
+object1 === object3
+false
+object1.value = 15
+15
+object2.value
+15
+object3.value
+10
+*/
+
+// context vs scope
+// function b() {
+// 	let a = 4
+// }
+
+// console.log(this)
+// console.log(this === window)
+// this.alert('hello')
+
+// function a() {
+// 	console.log(this)
+// }
+// a()
+
+const object4 = {
+	a: function () {
+		console.log(this)
+	},
+}
+
+// instantiation
+class Player {
+	constructor(name, type) {
+		console.log('player', this)
+		this.name = name
+		this.type = type
+	}
+	introduce() {
+		console.log(`Hi I am ${this.name}, I´m a ${this.type}`)
+	}
+}
+
+class Wizard extends Player {
+	constructor(name, type) {
+		super(name, type)
+		console.log('wizard', this)
+	}
+	play() {
+		console.log(`wEEEE I´m a ${this.type}`)
+	}
+}
+
+const wizard1 = new Wizard('Shelly', 'Healer')
+const wizard2 = new Wizard('Shawn', 'Dark Magic')
+
+// Classical Inheritance
+var Player = function (name, type) {
+	this.name = name
+	this.type = type
+}
+
+Player.prototype.introduce = function () {
+	console.log(`Hi I am ${this.name}, I´m a ${this.type}`)
+}
+
+var wizard1 = new Player('Shelly', 'healer')
+var wizard2 = new Player('Shawn', 'dark magic')
+
+wizard1.play = function () {
+	console.log(`WEEEEEE I´m a ${this.type}`)
+}
+
+wizard2.play = function () {
+	console.log(`WEEEEE I´m a ${this.type}`)
+}
