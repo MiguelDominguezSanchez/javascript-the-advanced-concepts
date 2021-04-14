@@ -4013,6 +4013,7 @@ wizard2.play = function () {
 
 // console.log('Hellooooo'.includes('o'))
 
+/*
 const pets = ['cat', 'dog', 'bat']
 
 console.log(pets.includes('dog'))
@@ -4026,3 +4027,47 @@ console.log(square(5))
 
 console.log(cube(3))
 console.log(cube(4))
+*/
+
+///////////////////////
+// 15.9 ES8
+
+// .padStart()
+// .padEnd()
+
+// console.log('Turtle'.padStart(10))
+// console.log('Turtle'.padEnd(10))
+
+const fun = (a, b, c, d, e) => {
+	console.log(a)
+}
+
+console.log(fun(1, 2, 3, 4))
+
+Object.values
+Object.entries
+Object.keys
+
+let obj = {
+	username0: 'Santa',
+	username1: 'Rudolf',
+	username2: 'Mr.Grinch',
+}
+
+Object.keys(obj).forEach((key, index) => {
+	console.log(key, obj[key])
+})
+
+Object.values(obj).forEach(value => {
+	console.log(value)
+})
+
+Object.entries(obj).forEach(value => {
+	console.log(value)
+})
+
+Object.entries(obj).map(value => {
+	return value[1] + value[0].replace('username', '')
+})
+
+Async Await
