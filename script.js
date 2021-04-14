@@ -4116,6 +4116,7 @@ const obj = Object.fromEntries(userProfiles)
 Object.entries(obj)
 */
 
+/*
 try {
 	true + 'hi'
 } catch {
@@ -4132,4 +4133,85 @@ try {
 	bob + 'hi'
 } catch (error) {
 	console.log('you messed up')
+}
+*/
+
+/*
+// Solve the below questions:
+
+// #1 Turn this array into a new array: [1,2,3,[4],[5]]. Bonus if you can do it on one line
+const array = [[1], [2], [3], [[[4]]], [[[5]]]]
+
+// #2 Turn this array into a new array: [ 'Hello young grasshopper!', 'you are', 'learning fast!' ]
+const greeting = [
+	['Hello', 'young', 'grasshopper!'],
+	['you', 'are'],
+	['learning', 'fast!'],
+]
+
+//#3 Turn the greeting array above into a string: 'Hello young grasshopper you are learning fast!'
+
+//#4 Turn the trapped 3 number into: [3]
+const trapped = [[[[[[[[[[[[[[[[[[[[[[[[[[3]]]]]]]]]]]]]]]]]]]]]]]]]]
+
+//#5 Clean up this email to have no whitespaces. Make the answer be in a single line (return a new string):
+const userEmail3 = '     cannotfillemailformcorrectly@gmail.com   '
+
+//#6 Turn the below users (value is their ID number) into an array: [ [ 'user1', 18273 ], [ 'user2', 92833 ], [ 'user3', 90315 ] ]
+const users = { user1: 18273, user2: 92833, user3: 90315 }
+
+//#7 change the output array of the above to have the user's IDs multiplied by 2 -- Should output:[ [ 'user1', 36546 ], [ 'user2', 185666 ], [ 'user3', 180630 ] ]
+
+//#8 change the output array of question #7 back into an object with all the users IDs updated to their new version. Should output: { user1: 36546, user2: 185666, user3: 180630 }
+*/
+
+///////////////////////
+// 15.12 Advanced Loops
+
+const basket = ['apples', 'oranges', 'grapes']
+const detailedBasket = {
+	apples: 5,
+	oranges: 10,
+	grapes: 1000,
+}
+
+basket = {
+	0: 'apples',
+	1: 'oranges',
+	2: 'grapes',
+}
+
+/*
+for (let i = 0; i < basket.length; i++) {
+	console.log(basket[i])
+}
+
+//2
+basket.forEach(item => {
+	console.log(item)
+})
+*/
+
+// for of
+// Iterating - arrays, strings
+/*
+for (item of basket) {
+	console.log(item)
+}
+*/
+
+for (item of detailBasket) {
+	console.log(item)
+}
+
+// for in - properties
+// enumerating - objects
+/*
+for (item in detailedBasket) {
+	console.log(item)
+}
+*/
+
+for (item in basket) {
+	console.log(item)
 }
