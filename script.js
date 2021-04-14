@@ -4167,7 +4167,7 @@ const users = { user1: 18273, user2: 92833, user3: 90315 }
 
 ///////////////////////
 // 15.12 Advanced Loops
-
+/*
 const basket = ['apples', 'oranges', 'grapes']
 const detailedBasket = {
 	apples: 5,
@@ -4180,7 +4180,7 @@ basket = {
 	1: 'oranges',
 	2: 'grapes',
 }
-
+*/
 /*
 for (let i = 0; i < basket.length; i++) {
 	console.log(basket[i])
@@ -4199,11 +4199,11 @@ for (item of basket) {
 	console.log(item)
 }
 */
-
+/*
 for (item of detailBasket) {
 	console.log(item)
 }
-
+*/
 // for in - properties
 // enumerating - objects
 /*
@@ -4211,7 +4211,28 @@ for (item in detailedBasket) {
 	console.log(item)
 }
 */
-
+/*
 for (item in basket) {
 	console.log(item)
 }
+*/
+
+///////////////////////
+// 15.13 Debugging
+
+/*
+const flattened = [
+	[0, 1],
+	[2, 3],
+	[4, 5],
+].reduce((accumulator, array) => {
+	// console.log('array', array)
+	// console.log('accumulator', accumulator)
+	debugger
+	return accumulator.concat(array)
+}, [])
+*/
+
+const flatenned 0 [[0,1], [2,3], [4,5]].reduce(
+	(a,b) => a.concat(b), []
+)
