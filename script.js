@@ -4038,6 +4038,7 @@ console.log(cube(4))
 // console.log('Turtle'.padStart(10))
 // console.log('Turtle'.padEnd(10))
 
+/*
 const fun = (a, b, c, d, e) => {
 	console.log(a)
 }
@@ -4071,3 +4072,64 @@ Object.entries(obj).map(value => {
 })
 
 Async Await
+*/
+
+///////////////////////
+// 15.11 ES10 (ES2019)
+/*
+const array = [1, 2, 3, 4, 5]
+array.flat()
+
+const array2 = [1, [2, 3], [4, 5]]
+array2.flat()
+
+const array3 = [1, 2, [3, 4, [5]]]
+array3.flat()
+
+const array4 = [1, 2, [3, 4, [5]]]
+array4.flat(2)
+
+const jurassicPark = [[1, 2], 3, 4, [5, 6], [[[[7]]]], 8, 9, 10]
+jurassicPark.flat(50)
+
+const entries = ['bob', 'sally', , , , , , 'cindy']
+entries.flat()
+
+const jurassicParkChaos = jurassicPark.flatMap(creature => creature + '4')
+
+console.log(jurassicParkChaos)
+
+const userEmail = '          eddytheeagle@gmail.com'
+const userEmail2 = 'jonnydangerous@gmail         '
+console.log(userEmail.trimStart())
+console.log(userEmail2.trimEnd())
+*/
+
+/*
+const userProfiles = [
+	['commanderTom', 23],
+	['derelZlander', 40],
+	['hansel', 18],
+]
+
+const obj = Object.fromEntries(userProfiles)
+Object.entries(obj)
+*/
+
+try {
+	true + 'hi'
+} catch {
+	console.log('you messed up')
+}
+
+try {
+	bob + 'hi'
+} catch {
+	console.log('you messed up')
+}
+
+try {
+	bob + 'hi'
+} catch (error) {
+	console.log('you messed up')
+}
